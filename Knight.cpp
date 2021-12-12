@@ -1,4 +1,4 @@
-// Knight implementation file
+// Knight implementation file  
 #include <iostream>
 #include <string>
 #include <exception>
@@ -66,4 +66,6 @@ Knight* Knight::duplicatePiece() noexcept
 {
     return new Knight(this->colour, this->isPieceFirstMove);
 }
+
+
 

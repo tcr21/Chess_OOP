@@ -122,5 +122,3 @@ Pawn* Pawn::duplicatePiece() noexcept
     return new Pawn(this->colour, this->isPieceFirstMove);
 }
 
-
-

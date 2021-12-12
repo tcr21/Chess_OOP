@@ -57,3 +57,5 @@ Rook* Rook::duplicatePiece() noexcept
 {
     return new Rook(this->colour, this->isPieceFirstMove);
 }
+
+

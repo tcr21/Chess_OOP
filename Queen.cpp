@@ -59,3 +59,5 @@ Queen* Queen::duplicatePiece() noexcept
 {
     return new Queen(this->colour, this->isPieceFirstMove);
 }
+
+
