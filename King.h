@@ -1,4 +1,4 @@
-// King header file  
+// King header file
 
 #ifndef KING_H
 #define KING_H

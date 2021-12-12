@@ -45,4 +45,3 @@ class Pawn : public Piece
 }; 
 
 #endif
-

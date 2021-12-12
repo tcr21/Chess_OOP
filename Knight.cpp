@@ -1,4 +1,4 @@
-// Knight implementation file  
+// Knight implementation file
 #include <iostream>
 #include <string>
 #include <exception>

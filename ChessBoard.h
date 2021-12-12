@@ -1,4 +1,4 @@
-// Chessboard header file
+// Chessboard header file 
 #ifndef CHESSBOARD_H
 #define CHESSBOARD_H
 

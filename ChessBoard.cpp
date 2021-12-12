@@ -1,4 +1,4 @@
-// Chessboard implementation file
+// Chessboard implementation file 
 
 #include <iostream>
 #include <map>

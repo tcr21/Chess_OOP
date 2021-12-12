@@ -1,4 +1,4 @@
-// Chess exceptions header file
+// Chess exceptions header file 
 
 #ifndef CHESSEXCEPTIONS_H
 #define CHESSEXCEPTIONS_H

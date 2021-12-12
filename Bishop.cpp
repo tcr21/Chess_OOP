@@ -1,4 +1,4 @@
-// Bishop implementation file
+// Bishop implementation file 
 #include <iostream>
 #include <string>
 #include <exception>

@@ -1,4 +1,4 @@
-// Chess exceptions implementation file
+// Chess exceptions implementation file 
 
 #include <string>
 #include <cstring>
