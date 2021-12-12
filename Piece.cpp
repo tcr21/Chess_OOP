@@ -330,7 +330,3 @@ void Piece::setFirstMoveDone() noexcept
 {
     isPieceFirstMove = false; 
 }
-
-
-
-

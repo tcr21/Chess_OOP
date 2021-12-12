@@ -53,6 +53,3 @@ King* King::duplicatePiece() noexcept
 {
     return new King(this->colour, this->isPieceFirstMove);
 }
-
-
-

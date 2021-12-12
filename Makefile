@@ -1,11 +1,14 @@
-chess: ChessMain.o ChessBoard.o Piece.o Pawn.o King.o Knight.o Queen.o Bishop.o Rook.o
-	g++ -Wall -g ChessMain.o ChessBoard.o Piece.o Pawn.o King.o Knight.o Queen.o Bishop.o Rook.o -o chess
+chess: ChessMain.o ChessBoard.o ChessExceptions.o Piece.o Pawn.o King.o Knight.o Queen.o Bishop.o Rook.o
+	g++ -Wall -g ChessMain.o ChessBoard.o ChessExceptions.o Piece.o Pawn.o King.o Knight.o Queen.o Bishop.o Rook.o -o chess
 
 ChessMain.o: ChessMain.cpp ChessBoard.h
 	g++ -Wall -g -c ChessMain.cpp -o ChessMain.o
 
 ChessBoard.o: ChessBoard.cpp ChessBoard.h
 	g++ -Wall -g -c ChessBoard.cpp -o ChessBoard.o
+
+ChessExceptions.o: ChessExceptions.cpp ChessExceptions.h
+	g++ -Wall -g -c ChessExceptions.cpp -o ChessExceptions.o
 
 Piece.o: Piece.cpp Piece.h
 	g++ -Wall -g -c Piece.cpp -o Piece.o
@@ -30,6 +33,4 @@ Rook.o: Rook.cpp Rook.h
 
 clean:
 	rm -f *.o chess
-
-
 

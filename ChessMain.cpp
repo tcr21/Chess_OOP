@@ -1,4 +1,4 @@
-#include"ChessBoard.h"  
+#include"ChessBoard.h" 
 
 #include<iostream>
 
@@ -77,5 +77,3 @@ int main() {
 
 	return 0;
 }
-
-

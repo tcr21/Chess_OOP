@@ -55,4 +55,3 @@ Bishop* Bishop::duplicatePiece() noexcept
 {
     return new Bishop(this->colour, this->isPieceFirstMove);
 }
-
