@@ -1,4 +1,4 @@
-// Bishop header file 
+// Bishop header file
 #ifndef BISHOP_H
 #define BISHOP_H
 

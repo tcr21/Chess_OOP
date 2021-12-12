@@ -1,4 +1,4 @@
-// Knight header file
+// Knight header file  
 #ifndef KNIGHT_H
 #define KNIGHT_H
 

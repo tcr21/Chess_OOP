@@ -1,4 +1,4 @@
-// King implementation file
+// King implementation file  
 
 #include <iostream>
 #include <string>

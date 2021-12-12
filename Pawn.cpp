@@ -1,4 +1,4 @@
-// Pawn implementation file 
+// Pawn implementation file
 #include <iostream>
 #include <string>
 #include <exception>
@@ -121,5 +121,6 @@ Pawn* Pawn::duplicatePiece() noexcept
 {
     return new Pawn(this->colour, this->isPieceFirstMove);
 }
+
 
 

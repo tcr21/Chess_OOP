@@ -69,3 +69,4 @@ const string& WrongPlayersTurnError::getPieceColour() const noexcept
 }
 
 
+
