@@ -1,4 +1,4 @@
-// Bishop implementation file
+// Bishop implementation file 
 #include <iostream>
 #include <string>
 #include <exception>
@@ -55,3 +55,4 @@ Bishop* Bishop::duplicatePiece() noexcept
 {
     return new Bishop(this->colour, this->isPieceFirstMove);
 }
+

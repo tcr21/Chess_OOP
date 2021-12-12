@@ -35,3 +35,4 @@ class Bishop : public Piece
 };
 
 #endif
+

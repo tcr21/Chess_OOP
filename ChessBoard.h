@@ -252,3 +252,5 @@ class WrongPlayersTurnError : public AnyError
 
 
 #endif
+
+

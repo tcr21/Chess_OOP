@@ -332,3 +332,5 @@ void Piece::setFirstMoveDone() noexcept
 }
 
 
+
+
