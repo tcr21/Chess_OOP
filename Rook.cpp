@@ -1,3 +1,4 @@
+// Tiphaine Ramenason
 // Rook implementation file 
 #include <iostream>
 #include <string>

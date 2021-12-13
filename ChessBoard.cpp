@@ -1,3 +1,4 @@
+// Tiphaine Ramenason
 // Chessboard implementation file 
 
 #include <iostream>
@@ -34,7 +35,7 @@ void ChessBoard::setUpBoard() noexcept
     setUpBlackPieces();
     setUpWhitePawns(); 
     setUpBlackPawns(); 
-    cout << "A new chess game is started! \n"; 
+    cout << "A new chess game is started!\n";
 }
 
 //==================================================================
@@ -45,6 +46,7 @@ void ChessBoard::setUpBoard() noexcept
 void ChessBoard::setUpGameConditions() noexcept
 {
     isWhitesTurn = true; 
+    gameIsInCheck = false;
     gameIsOver = false; 
 }
 
@@ -181,7 +183,7 @@ string ChessBoard::findMyKing(const map<string, Piece *> *boardMap) noexcept
             return pieceSquare;
         }
     }
-    cout << "Could not find my king \n"; 
+    // Should not happen since once the king is taken, the game is over
     return NULL; 
 }
 
@@ -205,7 +207,7 @@ string ChessBoard::findOpponentsKing(const map<string, Piece *> *boardMap) noexc
             return pieceSquare; 
         }
     }
-    cout << "Could not find opponent's king \n"; 
+    // Should not happen since once the king is taken, the game is over
     return NULL; 
 }
 
@@ -214,7 +216,6 @@ bool ChessBoard::myKingIsSafe(const map<string, Piece *> *boardMap) noexcept
 {
     // Find square where my king is
     string myKingSquare = findMyKing(boardMap); 
-    
     // Declare iterator to loop through map
     map<string, Piece *>::const_iterator itr; 
     // Go through the map (ie. where there are pieces)
@@ -241,7 +242,6 @@ bool ChessBoard::opponentsKingIsSafe(const map<string, Piece *> *boardMap) noexc
 {
     // Find square where opponent's king is
     string opponentsKingSquare = findOpponentsKing(boardMap); 
-    
     // Declare iterator to loop through map
     map<string, Piece *>::const_iterator itr; 
     // Go through the map (ie. where there are pieces)
@@ -268,7 +268,6 @@ map<string, Piece *>* ChessBoard::duplicateBoard(map<string, Piece *> *boardMap)
 {
     // Create a new board map
     map<string, Piece *>* boardMapCopy = new map<string, Piece *>; 
-
     // Declare iterator to loop through current board map 
     map<string, Piece *>::const_iterator itr;
     // Insert a duplicate of each piece into the new board copy, at the piece's
@@ -351,7 +350,7 @@ bool ChessBoard::opponentsKingWouldBeSafe(map<string, Piece *> *boardMap, const 
     map<string, Piece *> *boardMapCopy = duplicateBoard(boardMap);
     // Implement the move currently under consideration on the copy of the board
     implementMove(boardMapCopy, sourceSquare, destinationSquare, simulatedMove); 
-    // Check if my king is safe in the simulated game (on the board copied, with
+    // Check if opponents king is safe in the simulated game (on the board copied, with
     // the move having been made on it)
     if (opponentsKingIsSafe(boardMapCopy))
     {
@@ -507,19 +506,17 @@ void ChessBoard::submitMove(const string sourceSquare, const string destinationS
     }
 
     // i. Check for check, checkmate, stalemate
-
     // If opponent is in check, set game is in check game condition to true
     if (!opponentsKingIsSafe(boardMap))
     {
         gameIsInCheck = true;
     }
-
     // If valid moves left for opponent, then the oponnent is in check
     if (validMovesLeftForOpponent(boardMap))
     {
         if (gameIsInCheck)
         {
-            cout << opponentsColour << " is in check \n";
+            cout << opponentsColour << " is in check\n";
         }
     }
     // If no valid moves left for opponent
@@ -528,18 +525,19 @@ void ChessBoard::submitMove(const string sourceSquare, const string destinationS
         // and the opponent is in check, then they are in checkmate
         if (gameIsInCheck)
         {
-            cout << opponentsColour << " is in checkmate \n";
+            cout << opponentsColour << " is in checkmate\n";
         }
         // and the opponent is not in check, then they are in stalemate
         else 
         {
-            cout << opponentsColour << " is a stalemate \n"; 
+            cout << opponentsColour << " is a stalemate\n"; 
         }
         gameIsOver = true; 
     }
     
     // j. Swap player's turn
     isWhitesTurn = !isWhitesTurn; 
+    
     return; 
 }
 
@@ -548,20 +546,14 @@ void ChessBoard::resetBoard() noexcept
 {
     deleteBoard(boardMap);
     boardMap = new map<string, Piece *>;
-    isWhitesTurn = true;
-    gameIsInCheck = false;
-    gameIsOver = false; 
-    setUpBoard(); 
+    setUpBoard(); // Note: initialises game conditions (chessboard data members)
 }
 
 // 3. 
 ChessBoard::ChessBoard() noexcept
 {
     boardMap = new map<string, Piece *>; 
-    isWhitesTurn = true;
-    gameIsInCheck = false;
-    gameIsOver = false; 
-    setUpBoard();
+    setUpBoard(); // Note: initialises game conditions (chessboard data members)
 }
 
 // 4. 

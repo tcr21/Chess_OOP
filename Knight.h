@@ -1,3 +1,4 @@
+// Tiphaine Ramenason
 // Knight header file
 #ifndef KNIGHT_H
 #define KNIGHT_H

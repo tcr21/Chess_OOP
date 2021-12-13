@@ -1,3 +1,4 @@
+// Tiphaine Ramenason
 // Queen implementation file 
 #include <iostream>
 #include <string>

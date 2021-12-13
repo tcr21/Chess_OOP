@@ -1,3 +1,4 @@
+// Tiphaine Ramenason
 // Chess exceptions header file 
 
 #ifndef CHESSEXCEPTIONS_H

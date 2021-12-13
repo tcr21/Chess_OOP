@@ -1,3 +1,4 @@
+// Tiphaine Ramenason
 // Knight implementation file
 #include <iostream>
 #include <string>

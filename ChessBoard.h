@@ -1,3 +1,4 @@
+// Tiphaine Ramenason
 // Chessboard header file 
 #ifndef CHESSBOARD_H
 #define CHESSBOARD_H
@@ -16,7 +17,6 @@
 #include "Queen.h"
 #include "Bishop.h"
 #include "Rook.h"
-
 
 class ChessBoard
 {
@@ -144,7 +144,6 @@ class ChessBoard
 
         // 4. Destructor
         ~ChessBoard(); 
-
 }; 
 
 #endif

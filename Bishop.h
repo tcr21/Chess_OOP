@@ -1,3 +1,4 @@
+// Tiphaine Ramenason
 // Bishop header file 
 #ifndef BISHOP_H
 #define BISHOP_H

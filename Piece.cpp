@@ -1,4 +1,6 @@
-// Piece implementation file
+// Tiphaine Ramenason
+// Piece implementation file: abstract class acting as interface between different
+// pieces and chessboard
 
 #include <iostream>
 #include <string>

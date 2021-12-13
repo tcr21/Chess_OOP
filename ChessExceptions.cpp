@@ -1,3 +1,4 @@
+// Tiphaine Ramenason
 // Chess exceptions implementation file 
 
 #include <string>

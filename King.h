@@ -1,3 +1,4 @@
+// Tiphaine Ramenason
 // King header file
 
 #ifndef KING_H

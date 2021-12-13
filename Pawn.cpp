@@ -1,3 +1,4 @@
+// Tiphaine Ramenason
 // Pawn implementation file
 #include <iostream>
 #include <string>
@@ -77,7 +78,7 @@ Pawn::~Pawn() noexcept {}
 // Overrides Piece virtual function
 bool Pawn::pieceMoveIsValid(const map<string, Piece *> *boardMap, const string sourceSquare, const string destinationSquare) noexcept
 {
-    // a. Pawn may move forward to the unoccupied square immediately in front of
+    // Pawn may move forward to the unoccupied square immediately in front of
     // it on the same file (quote from Spec)
     if (areOnSameFile(sourceSquare, destinationSquare) 
     && areOnAdjacentRanks(sourceSquare, destinationSquare) 
@@ -87,7 +88,7 @@ bool Pawn::pieceMoveIsValid(const map<string, Piece *> *boardMap, const string s
         return true; 
     }
 
-    // b. On its first move Pawn may advance two squares along the same file
+    // On its first move Pawn may advance two squares along the same file
     // provided both squares are unoccupied (quote from Spec)
     if (this->isPieceFirstMove
     && areOnSameFile(sourceSquare, destinationSquare) 
@@ -99,7 +100,7 @@ bool Pawn::pieceMoveIsValid(const map<string, Piece *> *boardMap, const string s
         return true;
     }
 
-    // c. Pawn may move to a square occupied by an opponent’s piece which is
+    // Pawn may move to a square occupied by an opponent’s piece which is
     // diagonally in front of it on an adjacent file, capturing that piece (quote from Spec)
     if (areOnSameDiagonal(sourceSquare, destinationSquare)
     && areOnAdjacentRanks(sourceSquare, destinationSquare)

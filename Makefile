@@ -34,3 +34,4 @@ Rook.o: Rook.cpp Rook.h
 clean:
 	rm -f *.o chess
 
+

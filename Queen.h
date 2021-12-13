@@ -1,4 +1,5 @@
-// Queen header file 
+// Tiphaine Ramenason
+// Queen header file
 #ifndef QUEEN_H
 #define QUEEN_H
 

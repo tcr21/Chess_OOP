@@ -1,3 +1,4 @@
+// Tiphaine Ramenason
 // Piece header file: abstract class acting as interface between different
 // pieces and chessboard 
 #ifndef PIECE_H

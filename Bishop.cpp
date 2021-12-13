@@ -1,3 +1,4 @@
+// Tiphaine Ramenason
 // Bishop implementation file 
 #include <iostream>
 #include <string>

@@ -1,3 +1,4 @@
+// Tiphaine Ramenasons
 // King implementation file 
 
 #include <iostream>
@@ -30,7 +31,7 @@ King::~King() noexcept {}
 bool King::pieceMoveIsValid(const map<string, Piece *> *boardMap, const string sourceSquare, const string destinationSquare) noexcept
 {
     // A king moves one square in any direction (quote from Spec): if
-    // destination/ source are neither on adjacent files nor on adjacent ranks,
+    // destination/ source are not on adjacent files and on adjacent ranks,
     // then move is not valid
     if ( ! (areOnAdjacentRanks(sourceSquare, destinationSquare)
     && areOnAdjacentFiles(sourceSquare, destinationSquare)) )
